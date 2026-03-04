@@ -125,7 +125,7 @@ res = grangercausalitytests(df[['Y', 'X']], maxlag=7)
 ??? question "Q1: 什么时候用 DID，什么时候用 PSM？"
     *   **DID**: 适用于 **面板数据 (Panel Data)**，即有时间维度的前后对比 (Pre-Post)。要求满足平行趋势假设。
     *   **PSM**: 适用于 **横截面数据 (Cross-sectional Data)**，或者是虽然有时间维度但无法满足平行趋势的情况。PSM 只能消除 **可观测变量 (Observed Variables)** 的偏差。
-    *   **速记**: 参考上方 [方法选型决策树](#step-3-方法论选型-method-selection-decision-tree) 的 Mermaid 图。
+    *   **速记**: 参考本系列开头的方法选型决策树图表。
 
 ??? question "Q2: 如果不满足平行趋势假设怎么办？"
     *   **PSM-DID**: 先做 PSM 匹配找到相似的组，再对匹配后的样本做 DID。
