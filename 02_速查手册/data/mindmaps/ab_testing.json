@@ -1,0 +1,100 @@
+{
+    "meta": {
+        "name": "ab_testing",
+        "author": "Catherine",
+        "version": "1.0"
+    },
+    "format": "node_tree",
+    "data": {
+        "id": "root",
+        "topic": "A/B 测试体系",
+        "children": [
+            {
+                "id": "design",
+                "topic": "实验设计",
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "design_mde",
+                        "topic": "样本量计算 (MDE)"
+                    },
+                    {
+                        "id": "design_srm",
+                        "topic": "SRM 诊断"
+                    },
+                    {
+                        "id": "design_layer",
+                        "topic": "分层实验"
+                    }
+                ]
+            },
+            {
+                "id": "stats",
+                "topic": "统计检验",
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "stats_ttest",
+                        "topic": "T-Test"
+                    },
+                    {
+                        "id": "stats_chi",
+                        "topic": "Chi-Square"
+                    },
+                    {
+                        "id": "stats_mw",
+                        "topic": "Mann-Whitney"
+                    }
+                ]
+            },
+            {
+                "id": "advanced",
+                "topic": "高阶技巧",
+                "direction": "left",
+                "children": [
+                    {
+                        "id": "adv_cuped",
+                        "topic": "CUPED 方差缩减"
+                    },
+                    {
+                        "id": "adv_delta",
+                        "topic": "Delta Method"
+                    },
+                    {
+                        "id": "adv_seq",
+                        "topic": "Sequential Testing",
+                        "children": [
+                            {
+                                "id": "seq_obf",
+                                "topic": "OBF Alpha Spending"
+                            },
+                            {
+                                "id": "seq_dtd",
+                                "topic": "DTD vs LTD 监控"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "golive",
+                "topic": "全量上线决策",
+                "direction": "left",
+                "children": [
+                    {
+                        "id": "golive_guard",
+                        "topic": "护栏指标"
+                    },
+                    {
+                        "id": "golive_novelty",
+                        "topic": "Novelty Effect 衰减"
+                    },
+                    {
+                        "id": "golive_post",
+                        "topic": "Post-launch 监控"
+                    }
+                ]
+            }
+        ]
+    }
+}

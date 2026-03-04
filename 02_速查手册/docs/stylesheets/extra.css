@@ -1,0 +1,335 @@
+/* 代码块自动换行 (适配窄屏/30% 窗口模式) */
+.highlight code {
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
+}
+
+/* 表格也自适应宽度，防止溢出 */
+.md-typeset table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* ===== Mermaid 甘特图高对比度配色 (暗色主题) ===== */
+[data-md-color-scheme="slate"] .mermaid {
+  /* 甘特图 — 已完成任务 (翡翠绿) */
+  --gantt-done-fill: #10b981;
+  --gantt-done-stroke: #059669;
+  /* 甘特图 — 进行中任务 (琥珀色) */
+  --gantt-active-fill: #f59e0b;
+  --gantt-active-stroke: #d97706;
+  /* 甘特图 — 默认任务 (天蓝色) */
+  --gantt-default-fill: #3b82f6;
+  --gantt-default-stroke: #2563eb;
+}
+
+/* 暗色模式: 甘特图条形颜色覆写 */
+[data-md-color-scheme="slate"] .mermaid .done0,
+[data-md-color-scheme="slate"] .mermaid .done1 {
+  fill: #10b981 !important;
+  stroke: #059669 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .active0,
+[data-md-color-scheme="slate"] .mermaid .active1 {
+  fill: #f59e0b !important;
+  stroke: #d97706 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .task0,
+[data-md-color-scheme="slate"] .mermaid .task1 {
+  fill: #3b82f6 !important;
+  stroke: #2563eb !important;
+}
+
+/* 甘特图文字标签: 白色高对比 */
+[data-md-color-scheme="slate"] .mermaid .taskText,
+[data-md-color-scheme="slate"] .mermaid .taskTextOutsideRight,
+[data-md-color-scheme="slate"] .mermaid .taskTextOutsideLeft {
+  fill: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+/* 甘特图 Section 标签 */
+[data-md-color-scheme="slate"] .mermaid .sectionTitle {
+  fill: #e2e8f0 !important;
+  font-weight: 700 !important;
+}
+
+/* 甘特图标题 */
+[data-md-color-scheme="slate"] .mermaid .titleText {
+  fill: #f1f5f9 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* 甘特图网格线 (柔和) */
+[data-md-color-scheme="slate"] .mermaid .grid .tick line {
+  stroke: #475569 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .grid .tick text {
+  fill: #94a3b8 !important;
+}
+
+/* 甘特图 Section 背景：交替色增强区分度 */
+[data-md-color-scheme="slate"] .mermaid .section0 {
+  fill: rgba(30, 41, 59, 0.6) !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .section1 {
+  fill: rgba(51, 65, 85, 0.6) !important;
+}
+
+/* 甘特图 Section 标签：加大字号，确保可见 */
+[data-md-color-scheme="slate"] .mermaid .sectionTitle {
+  fill: #e2e8f0 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+/* ===== 亮色模式: 甘特图配色 ===== */
+[data-md-color-scheme="default"] .mermaid .done0,
+[data-md-color-scheme="default"] .mermaid .done1 {
+  fill: #059669 !important;
+  stroke: #047857 !important;
+}
+
+[data-md-color-scheme="default"] .mermaid .active0,
+[data-md-color-scheme="default"] .mermaid .active1 {
+  fill: #d97706 !important;
+  stroke: #b45309 !important;
+}
+
+[data-md-color-scheme="default"] .mermaid .taskText {
+  fill: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* ===== Mermaid 全屏预览按钮 ===== */
+.mermaid-container {
+  position: relative;
+}
+
+.mermaid-fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  background: rgba(30, 41, 59, 0.8);
+  color: #e2e8f0;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.mermaid-container:hover .mermaid-fullscreen-btn {
+  opacity: 1;
+}
+
+.mermaid-fullscreen-btn:hover {
+  background: rgba(59, 130, 246, 0.9);
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+/* 全屏状态样式 */
+.mermaid-fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  background: var(--md-default-bg-color, #1e1e2e) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 60px 40px 40px !important;
+  overflow: auto !important;
+  box-sizing: border-box !important;
+}
+
+.mermaid-fullscreen .mermaid-fullscreen-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  opacity: 1;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* 全屏时 SVG 自适应撑满屏幕宽度 */
+.mermaid-fullscreen .mermaid {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mermaid-fullscreen .mermaid svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 85vh !important;
+}
+
+/* ===== DataTables 暗色主题适配 ===== */
+
+/* 搜索框样式 */
+[data-md-color-scheme="slate"] .dataTables_filter input {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #475569 !important;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  outline: none !important;
+}
+
+[data-md-color-scheme="slate"] .dataTables_filter input:focus {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* 信息文字 */
+[data-md-color-scheme="slate"] .dataTables_info {
+  color: #94a3b8 !important;
+  font-size: 13px !important;
+  padding-top: 8px !important;
+}
+
+[data-md-color-scheme="slate"] .dataTables_filter label {
+  color: #94a3b8 !important;
+}
+
+/* 排序箭头 */
+[data-md-color-scheme="slate"] table.dataTable thead th {
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+/* 表格行 hover */
+[data-md-color-scheme="slate"] table.dataTable tbody tr:hover {
+  background-color: rgba(124, 58, 237, 0.1) !important;
+}
+
+/* 状态标签颜色 */
+.status-submitted {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.status-contacted {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.status-interview {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* 匹配度颜色 */
+.match-high {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.match-mid {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.match-low {
+  color: #94a3b8;
+}
+
+/* DataTables wrapper 样式优化 */
+.dataTables_wrapper {
+  padding: 8px 0 !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 12px !important;
+}
+
+/* DataTables 表格字体缩小 */
+table.datatables {
+  font-size: 9pt !important;
+}
+
+table.datatables th {
+  font-size: 9pt !important;
+}
+
+.dataTables_wrapper .dataTables_info {
+  font-size: 9pt !important;
+}
+
+/* DataTables 全屏按钮 */
+.dt-fullscreen-btn {
+  float: left;
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+  border: 1px solid #7c3aed;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.dt-fullscreen-btn:hover {
+  background: rgba(124, 58, 237, 0.4);
+  color: #ffffff;
+}
+
+/* DataTables 全屏状态 */
+.dataTables_wrapper.dt-fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  background: var(--md-default-bg-color, #1e1e2e) !important;
+  padding: 20px 30px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+
+.dataTables_wrapper.dt-fullscreen table.datatables {
+  width: 100% !important;
+  font-size: 10pt !important;
+}
+
+.dataTables_wrapper.dt-fullscreen .dt-fullscreen-btn {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 10000;
+  font-size: 14px;
+  padding: 8px 16px;
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+.dataTables_wrapper.dt-fullscreen .dt-fullscreen-btn:hover {
+  background: rgba(239, 68, 68, 0.5);
+  color: #ffffff;
+}

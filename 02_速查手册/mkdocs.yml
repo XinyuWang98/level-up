@@ -1,0 +1,136 @@
+site_name: 🧙‍♂️ 数据分析师 · Python 终极知识库
+site_url: ""
+site_description: 从 Python 基础到机器学习、NLP、因果推断的一站式速查手册
+site_author: XinyuWang
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色/深色模式切换
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+  features:
+    - navigation.instant      # 即时导航 (SPA 体验)
+    - navigation.tabs          # 顶部标签栏
+    - navigation.sections      # 左侧导航分组
+    - navigation.expand        # 自动展开导航
+    - navigation.top           # 回到顶部按钮
+    - search.suggest           # 搜索建议
+    - search.highlight         # 搜索高亮
+    - content.code.copy        # 代码一键复制按钮
+    - toc.follow               # 目录跟随滚动
+  icon:
+    logo: material/book-open-variant
+
+# 搜索 (lunr + jieba 中文分词, 不启用英文 stemmer 避免代码术语被错误变形)
+plugins:
+  - search:
+      lang:
+        - zh
+      separator: '[\s\u200b\u3000\-\.\(\)\`\=\_、。，．？！；：]+'
+
+# Markdown 扩展 (代码高亮、数学公式、提示框)
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite      # 行内代码高亮
+  - pymdownx.arithmatex:       # LaTeX 数学公式
+      generic: true
+  - admonition                 # 提示框 (Note/Warning/Tip)
+  - pymdownx.details           # 可折叠提示框
+  - pymdownx.tabbed:            # Tab 切换面板
+      alternate_style: true
+  - tables                     # 表格支持
+  - attr_list                  # 属性列表
+  - md_in_html                 # HTML 内嵌 Markdown
+
+# 自定义样式 (代码块自适应宽度)
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css
+
+# 数学公式渲染 (MathJax - 按官方文档配置，使用 CDN 加载)
+# 参考: https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/tracker.js
+  - javascripts/mermaid_fullscreen.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://code.jquery.com/jquery-3.7.1.min.js
+  - https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js
+  - javascripts/datatables_init.js
+
+# 页脚
+extra:
+  generator: false
+
+# 不使用目录式 URL (离线浏览兼容)
+use_directory_urls: false
+
+# 🧭 导航结构 (Router)
+nav:
+  - 🏠 首页: index.md
+  - 📗 基础工具:
+    - 🐍 Python 基础 & 心法: 01_python_basics.md
+    - 🔢 NumPy: 02_numpy.md
+    - 🐼 Pandas: 03_pandas.md
+    - 🧼 数据清洗: 03a_data_cleaning.md
+    - 🔧 数据处理 & 宽表构建: 03b_data_processing.md
+    - 🔍 EDA 探索性分析: 03c_eda.md
+    - 📊 可视化 Seaborn: 04_visualization.md
+  - 📕 推断与实验:
+    - 🗺️ 分析总纲 (Framework): 04_inference_framework.md
+    - 📐 统计学基础 (假设检验): 05_statistics.md
+    - 🔬 因果推断:
+      - 📋 总览 (SOP/选型): 15_causal_inference.md
+      - 📊 DID (双重差分): 15a_did.md
+      - 🎯 PSM & IPW (匹配/加权): 15b_psm_ipw.md
+      - 🧪 进阶 (RDD/IV): 15c_advanced.md
+      - 🛡️ 稳健性检验 (SC/Placebo): 15d_synthetic_control_placebo.md
+    - ⚖️ A/B 实验:
+      - 📈 A/B 基础 (设计/SRM/检验): 05b_ab_testing.md
+      - 🔧 A/B 高阶 (CUPED/Delta): 05a_ab_advanced.md
+    - 🕵️ 归因分析 (MTA): 18_attribution_analysis.md
+  - 📘 机器学习:
+    - 🧭 机器学习标准流程 (ML SOP): 00_ml_sop.md
+    - 📑 ML API 与代码片段速查: 18_ml_function_checklist.md
+    - 🎯 聚类分析 (特征构建): 11_clustering.md
+    - 🔧 特征工程 & Sklearn: 06_feature_engineering.md
+    - ✂️ 数据集拆分: 06b_data_splitting.md
+    - 🤖 建模 (LGB/CatBoost): 07_ml_models.md
+    - 📏 评估指标 & 调优 (Optuna): 08_evaluation.md
+    - 🕵️ SHAP 模型解释: 09_interpretation.md
+    - 📦 模型落地: 10_deployment.md
+    - ⚙️ 机器学习系统架构 (Drift/Active): 10a_ml_system_design.md
+    - 📈 时序预测: 12_time_series.md
+    - 🗣️ NLP 文本分析: 14_nlp.md
+  - 💰 业务分析 (留存/漏斗/RFM): 13_business_analysis.md
+  - 🏗️ 数据工程 (SQL/Pipeline): 16_data_engineering.md
+  - 🎤 面试准备:
+    - 📋 总览 (STAR/深挖/投递): 17_interview_prep.md
+    - ⚠️ 高频翻车错题本: 17_interview_mistakes.md
+    - 🧪 A/B 实验与假设检验: 17a_interview_ab.md
+    - 🔬 因果推断: 17b_interview_causal.md
+    - 🌲 树模型与集成学习: 17c_interview_tree.md
+    - 📈 时序预测: 17d_interview_timeseries.md
+    - 🔥 P7 深度拷问 Q&A: 17f_interview_deep_dive.md
+    - 🎯 分类与模型评估: 17e_interview_classify.md
+  - 📅 日程安排: dashboard.md
+  - 🧠 思维导图: mindmap.md

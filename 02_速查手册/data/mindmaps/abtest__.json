@@ -1,0 +1,314 @@
+{
+    "meta": {
+        "name": "abtest__",
+        "author": "Catherine",
+        "version": "1.0"
+    },
+    "format": "node_tree",
+    "data": {
+        "id": "root",
+        "topic": "abtest  ",
+        "expanded": true,
+        "children": [
+            {
+                "id": "node_1772115880758",
+                "topic": "决定决策指标",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772116072748",
+                        "topic": "明确假设检验方式",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116006984",
+                                "topic": "Binary 1/0",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116024896",
+                                        "topic": "T-Test",
+                                        "expanded": true,
+                                        "children": [
+                                            {
+                                                "id": "node_1772117049640",
+                                                "topic": "stats.ttest_ind(a,b)",
+                                                "expanded": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "node_1772116000799",
+                                "topic": "数值型",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772117175886",
+                                        "topic": "曼惠特尼U检验",
+                                        "expanded": true,
+                                        "children": [
+                                            {
+                                                "id": "node_1772116747422",
+                                                "topic": "stats.mannwhitneyu(a,b)",
+                                                "expanded": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "node_1772117164175",
+                                "topic": "新节点",
+                                "expanded": true
+                            },
+                            {
+                                "id": "node_1772115988971",
+                                "topic": "CTR Ratio",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116726197",
+                                        "topic": "T-Test Delta Method",
+                                        "expanded": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "node_1772115982239",
+                "topic": "护栏指标",
+                "expanded": true,
+                "direction": "right"
+            },
+            {
+                "id": "node_1772116082173",
+                "topic": "MDE最小样本量计算（知三求一）",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772116832422",
+                        "topic": "基线,目标 = p1,p2",
+                        "expanded": true
+                    },
+                    {
+                        "id": "node_1772116853532",
+                        "topic": "效应量effect_size计算：cohen's h",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116876820",
+                                "topic": "proportion_effectsize(p1,p2)",
+                                "expanded": true
+                            }
+                        ]
+                    },
+                    {
+                        "id": "node_1772116904530",
+                        "topic": "MDE计算",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116927055",
+                                "topic": "NormalIndPower().solve_power",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116966900",
+                                        "topic": "effect_size",
+                                        "expanded": true
+                                    },
+                                    {
+                                        "id": "node_1772116985725",
+                                        "topic": "power # 功效",
+                                        "expanded": true
+                                    },
+                                    {
+                                        "id": "node_1772117002336",
+                                        "topic": "alpha # 显著性水平",
+                                        "expanded": true
+                                    },
+                                    {
+                                        "id": "node_1772117014818",
+                                        "topic": "ratio # 对照组：实验组 = 1:1",
+                                        "expanded": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "node_1772116092100",
+                "topic": "SRM分流诊断",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772116809137",
+                        "topic": "卡方拟合优度检验",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116303449",
+                                "topic": "分流不均",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116371169",
+                                        "topic": "原因",
+                                        "expanded": true
+                                    },
+                                    {
+                                        "id": "node_1772116385144",
+                                        "topic": "挽救措施",
+                                        "expanded": true,
+                                        "children": [
+                                            {
+                                                "id": "node_1772116393158",
+                                                "topic": "控制组流量多：PSM匹配",
+                                                "expanded": true
+                                            },
+                                            {
+                                                "id": "node_1772116410366",
+                                                "topic": "实验组流量多：IPW加权",
+                                                "expanded": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "node_1772116358781",
+                                "topic": "分流均匀：继续做显著性计算",
+                                "expanded": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "node_1772116101205",
+                "topic": "显著性计算",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772116112268",
+                        "topic": "是否拒绝原假设：实验组与控制组无显著差异",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116140771",
+                                "topic": "拒绝原假设：P值<0",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116169668",
+                                        "topic": "我们有{p_value:.4%}的把握“实验组与控制组有显著差异”",
+                                        "expanded": true
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "node_1772116157988",
+                                "topic": "接受原假设：P值>0",
+                                "expanded": true,
+                                "children": [
+                                    {
+                                        "id": "node_1772116221722",
+                                        "topic": "我们有{p_value:.4%}的把握“实验组与控制组无显著差异”",
+                                        "expanded": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "node_1772116285772",
+                "topic": "效应量计算",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772117291270",
+                        "topic": "新节点",
+                        "expanded": true
+                    }
+                ]
+            },
+            {
+                "id": "node_1772116547242",
+                "topic": "置信区间计算",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772116560391",
+                        "topic": "置信区间与0是否重合",
+                        "expanded": true,
+                        "children": [
+                            {
+                                "id": "node_1772116603120",
+                                "topic": "有重合：拒绝上线",
+                                "expanded": true
+                            },
+                            {
+                                "id": "node_1772116675041",
+                                "topic": "无重合：继续检查下一项",
+                                "expanded": true
+                            }
+                        ]
+                    },
+                    {
+                        "id": "node_1772116611520",
+                        "topic": "置信区间是否高于成本阈值",
+                        "expanded": true
+                    }
+                ]
+            },
+            {
+                "id": "node_1772116573145",
+                "topic": "决策：输出报告",
+                "expanded": true,
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "node_1772117221069",
+                        "topic": "SRM诊断通过",
+                        "expanded": true
+                    },
+                    {
+                        "id": "node_1772117232590",
+                        "topic": "P值显著",
+                        "expanded": true
+                    },
+                    {
+                        "id": "node_1772117247863",
+                        "topic": "决策指标正向",
+                        "expanded": true
+                    },
+                    {
+                        "id": "node_1772117258435",
+                        "topic": "置信区间符合需求",
+                        "expanded": true
+                    },
+                    {
+                        "id": "node_1772117276720",
+                        "topic": "护栏指标无显著负向",
+                        "expanded": true
+                    }
+                ]
+            }
+        ]
+    }
+}
