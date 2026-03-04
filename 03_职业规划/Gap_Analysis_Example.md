@@ -14,15 +14,15 @@
 *   **核心逻辑**: 不止是看 dashboard，而是能预测未来 (Predictive) 和归因过去 (Attribution)。
 *   **JD 关键词**: "Identify trends/inefficiencies", "Root cause analysis", "Operational efficiency" (某新能源车企T公司), "Fraud/Risk" (某短视频大厂B公司).
 
-| 细分领域 (Sub-Domain)                  | 关键技术点 (Key Skills)   | Senior 标准 (Target) 🚀                             | 当前状态 (Current State) 📍 | 差距分析 (Gap Analysis) 📉                    |
-| :------------------------------------- | :------------------------ | :------------------------------------------------- | :------------------------- | :------------------------------------------- |
-| **用户生命周期**<br>(User Lifecycle)   | **LTV & Churn**           | 构建 LTV 预测模型 (bg/nbd) & 流失预警 (XGBoost)    | **B级 (XGBoost实战)** ✅    | **[+ Plus]** 已掌握 Churn 预测               |
-|                                        | **User Segmentation**     | 高阶聚类 (K-Means/DBSCAN) 用于精细化运营           | **B级 (RFM实战过)** ⚠️      | **[- Gap]** 缺乏高维聚类经验                 |
+| 细分领域 (Sub-Domain)                  | 关键技术点 (Key Skills)   | Senior 标准 (Target) 🚀                                     | 当前状态 (Current State) 📍 | 差距分析 (Gap Analysis) 📉                    |
+| :------------------------------------- | :------------------------ | :--------------------------------------------------------- | :------------------------- | :------------------------------------------- |
+| **用户生命周期**<br>(User Lifecycle)   | **LTV & Churn**           | 构建 LTV 预测模型 (bg/nbd) & 流失预警 (XGBoost)            | **B级 (XGBoost实战)** ✅    | **[+ Plus]** 已掌握 Churn 预测               |
+|                                        | **User Segmentation**     | 高阶聚类 (K-Means/DBSCAN) 用于精细化运营                   | **B级 (RFM实战过)** ⚠️      | **[- Gap]** 缺乏高维聚类经验                 |
 | **风控与运营**<br>(Risk & Ops)         | **Fraud Detection**       | 识别异常行为 (Anomaly Detection) - *某短视频大厂B公司重点* | **D级 (未接触)** ❌         | **[- Gap]** 需了解 Isolation Forest          |
-|                                        | **Supply Chain/Ops**      | 供应链/产能效率分析 - *某新能源车企T公司重点*                  | **D级 (未接触)** ❌         | **[- Gap]** 需补充运筹优化概念               |
-| **营销科学**<br>(Marketing Science)    | **Uplift Modeling**       | 区分 "Persuadables" (因果森林) - *Meta重点*        | **D级 (未接触)** ❌         | **[- Gap]** 高阶难点 (Optional)              |
-|                                        | **Attribution**           | MTA (多触点归因), Markov Chain                     | **C级 (理论了解)** ⚠️       | **[- Gap]** 缺乏代码实战                     |
-| **✨ 内容与增长**<br>(Content & Growth) | **Content Understanding** | 文本挖掘 (NLP), 推荐逻辑 (User-Item Matrix)        | **D级 (未接触)** ❌         | **[- Gap]** [🤖 DeepSeek] 字节/小红书 P0 技能 |
+|                                        | **Supply Chain/Ops**      | 供应链/产能效率分析 - *某新能源车企T公司重点*              | **D级 (未接触)** ❌         | **[- Gap]** 需补充运筹优化概念               |
+| **营销科学**<br>(Marketing Science)    | **Uplift Modeling**       | 区分 "Persuadables" (因果森林) - *Meta重点*                | **D级 (未接触)** ❌         | **[- Gap]** 高阶难点 (Optional)              |
+|                                        | **Attribution**           | MTA (多触点归因), Markov Chain                             | **C级 (理论了解)** ⚠️       | **[- Gap]** 缺乏代码实战                     |
+| **✨ 内容与增长**<br>(Content & Growth) | **Content Understanding** | 文本挖掘 (NLP), 推荐逻辑 (User-Item Matrix)                | **D级 (未接触)** ❌         | **[- Gap]** [🤖 DeepSeek] 字节/小红书 P0 技能 |
 
 ### 2. 因果推断 (Causal Inference)
 *   **核心逻辑**: 当无法做 A/B Test 时，如何证明因果性？
@@ -597,7 +597,7 @@ def compute_idf(corpus):
 *   **[+ Strategy]** **面试降维打击**: 构建了极其硬核的 `P-value = 0.08` 处理流程：SRM排查 → PSM/IPW 解决选择性偏差 → CUPED 终极降噪。彻底串联了 A/B 测试和因果推断。
 *   **[+ Concept]** 分清了 **PSM (个体匹配)** 和 **SCM (宏观实体合成)** 的业务适用边界。
 *   **[- Gap]** **Coding / Implementation**: A/B 测试高阶算法的代码实现比较多依赖 Snippets，白板默写能力较弱（但面试大概率只考业务思路和原理）。
-*   **[- Goal]** 下一步：转入真实投递阶段（今天已定制某在线旅游平台C公司国际机票简历），重点转为 **Mock Interview (行为面试/白板/STAR 故事表述)**。
+*   **[- Goal]** 下一步：转入真实投递阶段（今天已定制目标公司A简历），重点转为 **Mock Interview (行为面试/白板/STAR 故事表述)**。
 
 ---
 
