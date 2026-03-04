@@ -45,7 +45,7 @@ bash start.sh
 mkdocs serve
 ```
 
-访问 `http://localhost:8000` 即可浏览。
+访问 `http://localhost:8001` 即可浏览。
 
 ### 沉淀新知识
 

@@ -3,7 +3,7 @@
 Flask 服务，接收搜索事件、持久化到 JSON、提供 AI 学习建议。
 
 启动方式：python analytics_server.py
-默认端口：5111
+默认端口：5112
 """
 
 import json
@@ -18,7 +18,7 @@ from flask_cors import CORS
 # ========== 常量定义 ==========
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 LOG_FILE = os.path.join(DATA_DIR, 'search_log.json')
-SERVER_PORT = 5111
+SERVER_PORT = 5112
 OLLAMA_API_URL = 'http://localhost:11434/api/generate'
 DEFAULT_MODEL = 'deepseek-v3.1:671b-cloud'
 
@@ -130,7 +130,7 @@ DOCS_MAP = {
 
 # ========== Flask 应用 ==========
 app = Flask(__name__)
-CORS(app, origins=['http://127.0.0.1:8000', 'http://localhost:8000'])
+CORS(app, origins=['http://127.0.0.1:8001', 'http://localhost:8001'])
 
 
 def ensure_data_dir():
@@ -409,7 +409,11 @@ def save_mindmap(map_id):
 
 
 if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--port', type=int, default=SERVER_PORT)
+    args = parser.parse_args()
     ensure_data_dir()
-    print(f'📊 搜索分析服务启动: http://127.0.0.1:{SERVER_PORT}')
+    print(f'📊 搜索分析服务启动: http://127.0.0.1:{args.port}')
     print(f'📁 数据文件: {LOG_FILE}')
-    app.run(host='127.0.0.1', port=SERVER_PORT, debug=False)
+    app.run(host='127.0.0.1', port=args.port, debug=False)

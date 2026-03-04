@@ -4,7 +4,7 @@
  * 依赖: jsmind.js, jsmind.draggable-node.js
  */
 
-const MINDMAP_API_BASE = 'http://127.0.0.1:5111/api/mindmaps';
+const MINDMAP_API_BASE = 'http://127.0.0.1:5112/api/mindmaps';
 
 /**
  * 初始化一个可编辑的思维导图编辑器

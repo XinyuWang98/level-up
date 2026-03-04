@@ -12,7 +12,7 @@
 
     // ========== 常量定义 ==========
     const STORAGE_KEY = 'mkdocs_search_log';
-    const API_BASE = 'http://127.0.0.1:5111';
+    const API_BASE = 'http://127.0.0.1:5112';
     const DEBOUNCE_MS = 1500;          // 搜索防抖间隔
     const MAX_LOCAL_RECORDS = 500;     // localStorage 最大记录数
     const MIN_QUERY_LENGTH = 2;        // 最短查询长度

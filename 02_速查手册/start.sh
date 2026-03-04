@@ -15,8 +15,8 @@ if ! python3 -c "import flask" 2>/dev/null; then
 fi
 
 # 启动 Flask 分析服务 (后台)
-echo "📊 启动搜索分析服务 (端口 5111)..."
-python3 analytics_server.py &
+echo "📊 启动搜索分析服务 (端口 5112)..."
+python3 analytics_server.py --port 5112 &
 FLASK_PID=$!
 echo "   PID: $FLASK_PID"
 
@@ -24,12 +24,12 @@ echo "   PID: $FLASK_PID"
 sleep 1
 
 # 启动 MkDocs (前台)
-echo "📚 启动 MkDocs 知识库 (端口 8000)..."
+echo "📚 启动 MkDocs 知识库 (端口 8001)..."
 echo ""
 echo "========================================="
-echo "  🌐 知识库: http://127.0.0.1:8000"
-echo "  📊 看板:   http://127.0.0.1:8000/dashboard.html"
-echo "  📡 API:    http://127.0.0.1:5111"
+echo "  🌐 知识库: http://127.0.0.1:8001"
+echo "  📊 看板:   http://127.0.0.1:8001/dashboard.html"
+echo "  📡 API:    http://127.0.0.1:5112"
 echo "========================================="
 echo ""
 echo "按 Ctrl+C 停止所有服务"
@@ -45,4 +45,4 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 # 启动 MkDocs (前台运行，Ctrl+C 触发 cleanup)
-mkdocs serve
+mkdocs serve -a 127.0.0.1:8001

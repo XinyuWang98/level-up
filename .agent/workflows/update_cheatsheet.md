@@ -49,7 +49,7 @@ description: Update the MkDocs knowledge base with new knowledge points, code sn
 5. 重建并重启服务：
    ```bash
    # 先杀掉旧进程，再重新启动（包含 mkdocs serve + Flask 分析服务）
-   lsof -ti:8000 -ti:5111 | xargs kill 2>/dev/null
+   lsof -ti:8001 -ti:5112 | xargs kill 2>/dev/null
    cd ./02_速查手册 && bash start.sh
    ```
    > ⚠️ **必须重启**：`mkdocs build` 只会更新 `site/` 目录的静态文件，但不会刷新正在运行的 `mkdocs serve` 进程的内存缓存。必须杀掉旧进程并重新启动 `start.sh`，用户才能在浏览器中看到最新内容。
