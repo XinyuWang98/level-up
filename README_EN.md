@@ -41,7 +41,7 @@ level-up/
 ├── 02_速查手册/     → MkDocs-powered knowledge base (43 cheat sheets)
 ├── 05_职业规划/     → Gap Analysis + Resume + Application Tracker
 ├── 06_面试练习/     → AI mock interview summary reports
-├── 07_笔试模拟/     → Agent-generated exam questions (Pandas/SQL/Stats/A/B)
+├── 05_笔试模拟/     → Agent-generated exam questions (Pandas/SQL/Stats/A/B)
 ├── cv/              → Resume storage (with mock example)
 ├── data/            → Practice datasets
 └── .agent/          → Agent's "brain" (rules + workflows)
@@ -73,7 +73,7 @@ and generate a Gap Analysis matrix.
 [Paste JD here]
 ```
 
-3. Output will be saved in `05_职业规划/Gap_Analysis_Example.md` (see example)
+3. Output will be saved in `03_职业规划/Gap_Analysis_Example.md` (see example)
 
 ### Step 3: Start Learning
 

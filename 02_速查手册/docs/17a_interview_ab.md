@@ -80,7 +80,7 @@
     **核心答法**：4 个输入（α、1-β、MDE、基线方差）→ 公式或在线计算器 → 实际中常需与业务协商 MDE
 
 ??? note "Q5: 分层实验如何防止交叉污染？Spillover 怎么处理？"
-    → [查看降维打击回答：难题 4](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 4](17_interview_prep.md#p7-4)
 
 ### 进阶题（来源：模拟面试）
 
@@ -89,11 +89,11 @@
     **答法**：SRM 意味着随机分流遭到破坏 → P-value 无意义 → 必须先排查 SRM 原因 → 修复后重跑
 
 ??? warning "Q7: P=0.08 未显著，业务急着上线怎么办？ ⭐必练"
-    → [查看降维打击回答：难题 5](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 5](17_interview_prep.md#p7-flashcards)
     **骨架记忆**：排查 SRM/MDE → PSM/IPW 修复偏差 → CUPED 降噪
 
 ??? warning "Q8: 实验组比对照组少/多 5%，怎么挽救？ 😈硬核"
-    → [查看降维打击回答：难题 6](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 6](17_interview_prep.md#p7-flashcards)
     **骨架记忆**：少→PSM（丰水池找替身）| 多→IPW（枯水池加权拉扯）→ SMD + Placebo 验证
 
 ??? warning "Q9: CUPED 在大促期间还适用吗？（协变量分布变了）"

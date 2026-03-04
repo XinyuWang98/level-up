@@ -2,12 +2,12 @@
 description: Update Senior Data Analyst Gap Analysis Progress
 ---
 
-This workflow updates the `05_职业规划/Senior_DA_Gap_Analysis.md` document with your latest learning progress, identifying what gaps have been closed and what remains.
+This workflow updates the `05_职业规划/Gap_Analysis_Example.md` document with your latest learning progress, identifying what gaps have been closed and what remains.
 
 1.  **Read the Gap Analysis Document**:
     Check the current state of your skills assessment.
     // turbo
-    Run command: `cat "./05_职业规划/Senior_DA_Gap_Analysis.md"`
+    Run command: `cat "./05_职业规划/Gap_Analysis_Example.md"`
 
 2.  **Analyze Recent Progress** (Mental Step):
     Review what tasks or concepts you have recently completed (e.g., from `task.md` or recent conversation). Identify:

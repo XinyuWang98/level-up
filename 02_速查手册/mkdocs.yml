@@ -1,7 +1,7 @@
 site_name: 🧙‍♂️ 数据分析师 · Python 终极知识库
 site_url: ""
 site_description: 从 Python 基础到机器学习、NLP、因果推断的一站式速查手册
-site_author: XinyuWang
+site_author: Your_Name_Here
 
 # 主题配置
 theme:
@@ -126,6 +126,7 @@ nav:
   - 🎤 面试准备:
     - 📋 总览 (STAR/深挖/投递): 17_interview_prep.md
     - ⚠️ 高频翻车错题本: 17_interview_mistakes.md
+    - 🤖 核心机器学面经速查: 17_ml_interview_cheat_sheet.md
     - 🧪 A/B 实验与假设检验: 17a_interview_ab.md
     - 🔬 因果推断: 17b_interview_causal.md
     - 🌲 树模型与集成学习: 17c_interview_tree.md

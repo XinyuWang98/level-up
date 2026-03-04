@@ -57,7 +57,7 @@
     **骨架**：RandomizedSearchCV → `max_depth`(复杂度)、`learning_rate`(步长)、`subsample`(防过拟合)、`colsample_bytree`(特征采样)
 
 ??? note "Q3: 特征重要性怎么解读？"
-    → [查看降维打击回答：难题 3](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 3](17_interview_prep.md#p7-flashcards)
 
 ### 进阶题（来源：模拟面试）
 

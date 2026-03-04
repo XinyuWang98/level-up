@@ -39,10 +39,9 @@ level-up/
 ├── 00_教学课件/     → Agent 生成的分级练习 Notebook + 每日复盘
 ├── 01_专项专栏/     → 按知识域分类的深度练习（AB测试/ML/因果推断）
 ├── 02_速查手册/     → MkDocs 驱动的知识库（43 篇速查文档）
-├── 05_职业规划/     → Gap Analysis + 简历 + 投递追踪
-├── 06_面试练习/     → AI 模拟面试的总结报告
-├── 07_笔试模拟/     → Agent 生成的笔试题（Pandas/SQL/统计/AB）
-├── cv/              → 简历存放位置（含 mock 示例）
+├── 03_职业规划/     → Gap Analysis + 简历 + 投递追踪 (cv 模板在内)
+├── 04_面试练习/     → AI 模拟面试的总结报告
+├── 05_笔试模拟/     → Agent 生成的笔试题（Pandas/SQL/统计/AB）
 ├── data/            → 练习用数据集
 └── .agent/          → Agent 的"大脑"（rules + workflows）
 ```
@@ -72,7 +71,7 @@ level-up/
 [粘贴 JD]
 ```
 
-3. 产出会保存在 `05_职业规划/Gap_Analysis_Example.md`（参考示例）
+3. 产出会保存在 `03_职业规划/Gap_Analysis_Example.md`（参考示例）
 
 ### 第 3 步：开始学习
 

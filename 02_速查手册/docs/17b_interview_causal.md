@@ -58,7 +58,7 @@
 
 ??? warning "Q3: 转人工率下降 9pp，如何归因到你的项目？ ⭐必练"
     **来源**：Gemini 模拟面试
-    → [查看降维打击回答：难题 1](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 1](17_interview_prep.md#p7-flashcards)
     **骨架记忆**：Phased Rollout → PSM 匹配渠道特征 → DID 剔除时间趋势 → SRM 验证
 
 ??? warning "Q4: DID 平行趋势假设怎么验证？如果不平行呢？ ⭐杀手锏题"
@@ -69,7 +69,7 @@
     3. 如果不平行：改用 PSM-DID（先匹配再差分）或 SCM（合成控制法）
 
 ??? warning "Q5: SRM 后用 IPW 挽救，业务说你在造假，怎么办？ 😈硬核"
-    → [查看降维打击回答：难题 6](17_interview_prep.md#31-p7-难题回答策略-折叠闪卡)
+    → [查看降维打击回答：难题 6](17_interview_prep.md#p7-flashcards)
     **骨架记忆**：SMD Balance Check（加权后特征对齐）+ Placebo Test（把权重套到历史数据，ATE≈0 证明权重合法）
 
 ### 🎤 豆包模拟面试高频题 (2026.02.27 — 因果推断专场)

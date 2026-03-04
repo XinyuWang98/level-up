@@ -42,7 +42,7 @@ cat "./02_速查手册/data/search_log.json" 2>/dev/null || echo "[]"
 
 // turbo
 ```bash
-cat "./05_职业规划/Senior_DA_Gap_Analysis.md"
+cat "./05_职业规划/Gap_Analysis_Example.md"
 ```
 
 在 `## 📝 历史进度追踪 (Progress Log)` 部分追加今日条目：
