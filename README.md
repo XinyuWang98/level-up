@@ -135,3 +135,11 @@ A: 完全不需要。不管是 Cursor、Windsurf 还是 VS Code (搭配 Copilot/
 
 **Q: 我不是做算法或数分的，这套系统对我有用吗？**  
 A: 绝对有。这里的底层方法论是跨学科的：**Benchmark（定位盲区） → 学习沉淀 → 实战模拟 → 求职追踪**。你只需要稍微修改 `.agent/rules/` 里的角色设定，把它变成你的“产品经理”、“Java开发”或“独立开发者”专属导师即可。
+
+---
+
+## 🙏 鸣谢 (Special Thanks)
+
+本项目 `02_速查手册` 的优雅呈现，离不开这群了不起的开源先驱：
+- 特别鸣谢 [MkDocs](https://www.mkdocs.org/) 提供了强大且极简的静态站点生成能力。
+- 特别鸣谢 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 带来了如此现代化、高颜值的文档主题交互体验。
