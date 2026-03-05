@@ -1,7 +1,5 @@
 # 🎓 Level Up — AI Agent 辅助学习系统（真实案例）
 
-> **[中文](README.md) | [English](README_EN.md)**
-
 一套基于 **AI Agent + IDE** 的零成本学习方法论框架。这个仓库是作者的真实学习历程，展示如何用 AI Agent 搭建覆盖 **学习 → 实战 → 求职** 全生命周期的辅助学习系统。
 
 ---
