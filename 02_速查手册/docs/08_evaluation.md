@@ -4,7 +4,7 @@
 | :------------ | :----------------- | :---------------------------------- | :---------------------------------------------- | :------------- |
 | **MSE**       | 均方误差           | `mean_squared_error`                | **loss function**。甚至会帮你求导。             | **❌ 越低越好** |
 | **RMSE**      | 均方根误差         | `mean_squared_error(squared=False)` | **标准误差**。单位和 Target 一样 ($)。          | **❌ 越低越好** |
-| **MAE**       | 平均绝对误差       | `mean_absolute_error`               | **人话指标**。平均差了多少钱？                  | **❌ 越低越好** |
+| **M[目标业务]**       | 平均绝对误差       | `mean_absolute_error`               | **人话指标**。平均差了多少钱？                  | **❌ 越低越好** |
 | **MAPE**      | 平均绝对百分比误差 | `mean_absolute_percentage_error`    | **老板看**。平均差了百分之几？(注意分母不能为0) | **❌ 越低越好** |
 | **R²**        | R-Squared          | `r2_score`                          | **拟合优度**。比瞎猜平均值强多少？(1.0是完美)   | ✅ 越高越好     |
 
@@ -14,7 +14,7 @@
 graph TD
     A["❓ 任务类型?"] -->|"回归"| B["❓ 关注什么?"]
     A -->|"分类"| C["❓ 数据平衡吗?"]
-    B -->|"绝对误差"| D["MAE"]
+    B -->|"绝对误差"| D["M[目标业务]"]
     B -->|"相对误差"| E["MAPE"]
     B -->|"极值敏感"| F["RMSE"]
     B -->|"拟合优度"| G["R²"]
@@ -34,10 +34,10 @@ graph TD
     style L fill:#8250df,color:#fff,stroke:#6639ba,stroke-width:2px
 ```
 
-> **💡 Pro Tip: MAE vs MAPE vs MAE/Mean**
-> *   **MAE**: 绝对值 (比如差 100 块)。问题：如果不看均值，你不知道 100 块是大是小。
+> **💡 Pro Tip: M[目标业务] vs MAPE vs M[目标业务]/Mean**
+> *   **M[目标业务]**: 绝对值 (比如差 100 块)。问题：如果不看均值，你不知道 100 块是大是小。
 > *   **MAPE**: 每一行的百分比误差求平均。问题：如果这就行 `y_true` 很小 (e.g. 1)，误差会被无限放大。
-> *   **MAE / Mean**: 全局的相对误差。**最稳健的业务指标！** 相当于 "总误差 / 总销量"。
+> *   **M[目标业务] / Mean**: 全局的相对误差。**最稳健的业务指标！** 相当于 "总误差 / 总销量"。
 
 > **💡 Pro Tip: 让报告说人话 (target_names)**
 > ```python
@@ -164,32 +164,32 @@ y_pred_recall = (y_prob > 0.3).astype(int) # 只要嫌疑超过 30% 就抓！
 *   用了 SMOTE 后，Recall 上去了，但 Precision 跌成狗。
 *   **真相**: 这是 Feature 不是 Bug。风控逻辑: 宁可错杀 1000，不可放过 1。
 
-## 回归模型快速诊断 (MAE Benchmark) 🩺
-*MAE 数字本身没有意义，必须跟均值比。*
+## 回归模型快速诊断 (M[目标业务] Benchmark) 🩺
+*M[目标业务] 数字本身没有意义，必须跟均值比。*
 
-| MAE / mean | 诊断     | 说明                                 |
+| M[目标业务] / mean | 诊断     | 说明                                 |
 | :--------- | :------- | :----------------------------------- |
 | **< 20%**  | ✅ 不错   | 模型预测接近真实值                   |
 | **20-30%** | ⚠️ 可接受 | 有改进空间但可用                     |
 | **30-50%** | 😟 有问题 | 需要优化特征或模型                   |
 | **> 100%** | ❌ 严重   | 平均误差超过均值本身，模型基本不可用 |
 
-??? example "MAE 快速诊断代码"
+??? example "M[目标业务] 快速诊断代码"
 
     ```python
-    # 快速诊断：MAE / mean 比率
+    # 快速诊断：M[目标业务] / mean 比率
     mae = mean_absolute_error(y_test, y_pred)
     ratio = mae / y_test.mean()
-    print(f'MAE: {mae:.0f} | Mean: {y_test.mean():.0f} | MAE/Mean: {ratio:.1%}')
+    print(f'M[目标业务]: {mae:.0f} | Mean: {y_test.mean():.0f} | M[目标业务]/Mean: {ratio:.1%}')
 
     # 💡 如果 std > mean (CV > 1)，说明数据本身波动极大
-    # 此时 MAE 高不一定是模型的问题，而是数据粒度太细
+    # 此时 M[目标业务] 高不一定是模型的问题，而是数据粒度太细
     cv = y_test.std() / y_test.mean()
     print(f'变异系数 CV: {cv:.2f}')  # CV > 1 → 考虑换更粗粒度 (日→周)
     ```
 
 ## 分层评估 (Stratified Evaluation) 📊
-*总体 MAE 被极值拉高？拆开看才知道真相。*
+*总体 M[目标业务] 被极值拉高？拆开看才知道真相。*
 
 ??? example "分层评估代码模板"
 
@@ -203,14 +203,14 @@ y_pred_recall = (y_prob > 0.3).astype(int) # 只要嫌疑超过 30% 就抓！
     mae_normal = mean_absolute_error(y_test[mask_normal], y_pred[mask_normal])
     mae_extreme = mean_absolute_error(y_test[mask_extreme], y_pred[mask_extreme])
 
-    print(f'Normal Days  MAE: {mae_normal:.0f}  (占 {mask_normal.mean():.0%})')
-    print(f'Extreme Days MAE: {mae_extreme:.0f}  (占 {mask_extreme.mean():.0%})')
+    print(f'Normal Days  M[目标业务]: {mae_normal:.0f}  (占 {mask_normal.mean():.0%})')
+    print(f'Extreme Days M[目标业务]: {mae_extreme:.0f}  (占 {mask_extreme.mean():.0%})')
     ```
 
 !!! tip "什么时候用分层评估？"
 
     - 数据有**明显的极值/尖刺** (如日级销售额)
-    - 总体 MAE 很高，但你怀疑是**少数极端样本拉高了均值**
+    - 总体 M[目标业务] 很高，但你怀疑是**少数极端样本拉高了均值**
     - 想向业务方证明：模型在**正常场景下是可用的**，极值天是"不可预测的随机事件"
 
 ---

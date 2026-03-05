@@ -427,7 +427,7 @@ xgb_X_test  = X_test[feature_cols]
 
 ### 7.1 分层评估 (Stratified Evaluation)
 
-> **Why?** 只看整体 MAE 会掩盖极值点的真实表现。Senior 必须分层评估。
+> **Why?** 只看整体 M[目标业务] 会掩盖极值点的真实表现。Senior 必须分层评估。
 
 ??? example "分层评估代码模板"
 
@@ -442,9 +442,9 @@ xgb_X_test  = X_test[feature_cols]
     mae_extreme = mean_absolute_error(y_test[mask_extreme], y_pred[mask_extreme])
     mae_normal  = mean_absolute_error(y_test[~mask_extreme], y_pred[~mask_extreme])
 
-    print(f'Overall MAE:  {mae_overall:.2f}')
-    print(f'Extreme MAE:  {mae_extreme:.2f}')  # 极值预测好不好？
-    print(f'Normal MAE:   {mae_normal:.2f}')
+    print(f'Overall M[目标业务]:  {mae_overall:.2f}')
+    print(f'Extreme M[目标业务]:  {mae_extreme:.2f}')  # 极值预测好不好？
+    print(f'Normal M[目标业务]:   {mae_normal:.2f}')
     ```
 
 ### 7.2 预测值 vs 真实值 (Predictions vs Actuals)

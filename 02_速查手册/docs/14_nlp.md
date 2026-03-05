@@ -93,7 +93,7 @@
 | **无标签** (冷启动探索)     | CountVectorizer → LDA     | 要机器帮你“猜”出主题       |
 | **做分类/预测**             | TfidfVectorizer → XGBoost | 权重特征更适合监督学习     |
 
-### 🔥 全集 TF-IDF → 按标签 GroupBy 提取痛点词 (VoC SOP)
+### 🔥 全集 TF-IDF → 按标签 GroupBy 提取痛点词 (用户行为轨迹 SOP)
 *当业务已有主题标签时，不需要 LDA，直接用这套流程。*
 
 ??? example "🔥 TF-IDF GroupBy 主题痛点词提取 SOP"

@@ -10,7 +10,7 @@
 | **数据切分**             | `train_test_split`                            | `sklearn.model_selection` | 别写成 `sklearn.cross_validation` (那是一百年前的事了) |
 | **交叉验证**             | `cross_val_score`, `KFold`                    | `sklearn.model_selection` |                                                        |
 | **网格搜索**             | `GridSearchCV`, `RandomizedSearchCV`          | `sklearn.model_selection` | 调参神器                                               |
-| **评估指标 (回归)**      | `mean_absolute_error`, `mean_squared_error`   | `sklearn.metrics`         | MAE, MSE                                               |
+| **评估指标 (回归)**      | `mean_absolute_error`, `mean_squared_error`   | `sklearn.metrics`         | M[目标业务], MSE                                               |
 | **评估指标 (回归)**      | `mean_absolute_percentage_error`              | `sklearn.metrics`         | MAPE (注意分母为0)                                     |
 | **评估指标 (分类)**      | `accuracy_score`, `roc_auc_score`, `f1_score` | `sklearn.metrics`         | 还有 `log_loss`                                        |
 | **模型报告 (分类)**      | `classification_report`                       | `sklearn.metrics`         | 一次性打印 Precision/Recall/F1                         |

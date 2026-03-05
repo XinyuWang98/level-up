@@ -296,8 +296,8 @@ def msprt_open_ended_threshold(current_accumulated_n, tau_sq, alpha=0.05):
 # ================= 模拟工业界闭环 =================
 
 # 1. 实验前规划
-BASE_RATE = 0.20   # 基线转人工率 20%
-MDE_REL = 0.05     # 业务要求至少干预掉 5% 的转人工率 (MDE_abs = 0.01)
+BASE_RATE = 0.20   # 基线核心流失率 20%
+MDE_REL = 0.05     # 业务要求至少干预掉 5% 的核心流失率 (MDE_abs = 0.01)
 
 n_max = calc_max_sample_size(BASE_RATE, MDE_REL)
 tau_squared = calc_msprt_tau_sq(MDE_REL, BASE_RATE, n_max)
@@ -502,7 +502,7 @@ Day 6-7:  ██████        +4%   ← 稳定 → ✅ 真实效果！
 
 | 场景               | 短期表现        | 长期隐患                              |
 | :----------------- | :-------------- | :------------------------------------ |
-| FAQ 改版减少转人工 | ✅ 转人工率 -9pp | ⚠️ 用户问题未真正解决 → 复购率可能下降 |
+| FAQ 改版减少流失 | ✅ 核心流失率 -9pp | ⚠️ 用户问题未真正解决 → 复购率可能下降 |
 | 推荐算法优化 CTR   | ✅ CTR +3%       | ⚠️ 同质化推荐 → 用户长期兴趣衰减       |
 | 激进弹窗提升注册   | ✅ 注册率 +15%   | ⚠️ 用户体验恶化 → 7 日留存下降         |
 
@@ -530,7 +530,7 @@ Day 6-7:  ██████        +4%   ← 稳定 → ✅ 真实效果！
 
 | 视频                                                                                                    | 说明                                                                        |
 | :------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------- |
-| [Sequential Testing in A/B Experiments (Uber Engineering)](https://www.youtube.com/watch?v=nMCnmr0AErg) | Uber 工程团队讲解 mSPRT 贯序检验在其实验平台中的实战应用                    |
+| [Sequential Testing in A/B Experiments (Uber Engineering)](https://www.youtube.com/watch?v=nMCnmr0[目标业务]rg) | Uber 工程团队讲解 mSPRT 贯序检验在其实验平台中的实战应用                    |
 | [Group Sequential Tests: Alpha Spending (PASS Software)](https://www.youtube.com/watch?v=s6gMW8VEy5I)   | 详细讲解 O'Brien-Fleming 和 Pocock Alpha Spending Function 的数学推导与用法 |
 
 !!! tip "学习顺序建议"

@@ -6,7 +6,7 @@
 ---
 
 ## 💡 核心优势 (Highlights)
-*   **体系设计能力**：5年+数据分析经验，擅长设计端到端业务预测与实验评估体系，将数据洞察（NLP/特征分析）与因果推断（DID/PSM/A/B 实验）应用于**智能客服、人力调度、策略迭代**场景。
+*   **体系设计能力**：5年+数据分析经验，擅长设计端到端业务预测与实验评估体系，将数据洞察（NLP/特征分析）与因果推断（DID/PSM/A/B 实验）应用于**个性化推荐/核心系统、人力调度、策略迭代**场景。
 *   **工程化思维**: 具备闭环落地能力，能够独立完成**算法原型验证**与**自动化报表设计**，熟练掌握 SQL (Hive/Trino)、Python (Pandas/Sklearn) 及 BI 工具 (Tableau)。主动探索 Docker 与 Airflow，有效降低与产研团队的沟通成本。
 *   **严谨实验论证**：精通 A/B 实验设计与高阶评估方法（CUPED/Delta Method/SRM诊断），拒绝"玄学"分析，坚持数据驱动决策。
 
@@ -14,7 +14,7 @@
 
 ## 🛠 技术栈 (Tech Stack)
 *   **数据分析**: SQL (Hive/Trino/Spark SQL), Python (Pandas/NumPy), Tableau, Excel (VBA)
-*   **机器学习**: **Text Mining** (VoC Analysis/Sentiment), **Classification/Regression** (XGBoost/LightGBM/RF), **Time Series** (Prophet), **Hyperparameter Tuning** (RandomizedSearchCV/Optuna)
+*   **机器学习**: **Text Mining** (用户行为轨迹 Analysis/Sentiment), **Classification/Regression** (XGBoost/LightGBM/RF), **Time Series** (Prophet), **Hyperparameter Tuning** (RandomizedSearchCV/Optuna)
 *   **因果推断**: **DoWhy**, PSM (倾向性得分匹配), DID (双重差分), Causal Impact
 *   **工具与协作**: Airflow (Directed Acyclic Graphs), Git (Version Control), Docker (Basic), Streamlit (Prototyping)
 
@@ -22,7 +22,7 @@
 
 ## 💼 工作经历 (Work Experience)
 
-### **前司某电商平台 | 资深数据分析师 2022.08 - 2025.12**
+### **[前司名称] | 资深数据分析师 2022.08 - 2025.12**
 
 #### **1. 核心业务 A/B 实验平台体系建设（0-1 主导）**
 > *背景：业务策略迭代缺乏量化评估标准，依赖人工经验，效果归因周期长（[X]天+）。*
@@ -33,7 +33,7 @@
 *   **实时监控体系**: 设计并搭建实验健康度看板，定义 SRM (Sample Ratio Mismatch) 诊断逻辑与 Peeking 风险告警。
 *   **业务价值**: 策略迭代与验证周期大幅缩短，某一**核心干预策略**实验成功降低负向指标 **[X.X]pp**，同时通过严谨的假设检验规避了多次潜在负向策略的全量上线。
 
-#### **2. 业务痛点智能诊断与异常监控体系（VoC）**
+#### **2. 业务痛点智能诊断与异常监控体系（用户行为轨迹）**
 > *背景：业务域日均流量 [X]M+，核心漏斗流失率高达 [XX]%，各细分市场表现差异极大且根因不明。*
 *   **事件标签化抽象**: 针对业务关键节点建立行为标签与反馈维度（如是否干预、是否有负反馈），作为后续异动诊断分析的基础数据底座。
 *   **问题定位（交叉分析）**: 运用 Python 对负反馈文本数据提取高频词/短语进行痛点初筛，并结合算法团队提供的**业务主题标签**做归属聚合——精准定位每个主题下用户流失/不满的细分根因。

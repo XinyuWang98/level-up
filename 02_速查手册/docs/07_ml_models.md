@@ -79,7 +79,7 @@ graph TD
     # 预测 & 评估
     y_pred = xgb_model.predict(X_test)
     mae = mean_absolute_error(y_test, y_pred)
-    print(f'XGBoost MAE: {mae:.2f}')
+    print(f'XGBoost M[目标业务]: {mae:.2f}')
     ```
 
 ??? example "2. 分类 (Classification): 预测 0/1 (流失/欺诈)"
@@ -144,7 +144,7 @@ graph TD
 *   **换算关系**: 如果 `num_leaves > 2^max_depth`，模型会过拟合！
 
 ## SOTA 模型: CatBoost 🐱
-*处理类别特征的神器 (目标大厂/美团常用)。*
+*处理类别特征的神器 ([目标公司]/美团常用)。*
 
 ??? example "CatBoost 代码模板"
 
@@ -229,11 +229,11 @@ graph TD
 
 | 症状 (Symptom)                         | 病因 (Root Cause)                  | 处方 (Solution)                          | 代码关键词                               |
 | :------------------------------------- | :--------------------------------- | :--------------------------------------- | :--------------------------------------- |
-| RMSE/MAE 从第 N 轮开始**不再下降**     | 模型已学到极限，后续在过拟合       | **Early Stopping**                       | `early_stopping_rounds=50`               |
-| MAE 很低但**不合理的好**               | **Data Leakage** (偷看了未来信息)  | 检查 Feature Importance，删泄露特征      | `xgb.plot_importance()`                  |
+| RMSE/M[目标业务] 从第 N 轮开始**不再下降**     | 模型已学到极限，后续在过拟合       | **Early Stopping**                       | `early_stopping_rounds=50`               |
+| M[目标业务] 很低但**不合理的好**               | **Data Leakage** (偷看了未来信息)  | 检查 Feature Importance，删泄露特征      | `xgb.plot_importance()`                  |
 | 模型**不敢冲高**，极值严重低估         | 树模型预测叶子均值，极值被"平均"掉 | **样本加权** (给极值 x3 权重)            | `sample_weight=weights`                  |
 | 模型整体**预测偏移** (系统性偏高/偏低) | 数据分布变化 (趋势/季节)           | 检查 Train/Test 分布是否一致             | 对比 `y_train.mean()` vs `y_test.mean()` |
-| MAE / mean **> 100%**                  | 数据本身**波动极大** (CV > 1)      | 接受现实 / 换更粗粒度 (日→周) / 分层评估 | `y_test.std() / y_test.mean()`           |
+| M[目标业务] / mean **> 100%**                  | 数据本身**波动极大** (CV > 1)      | 接受现实 / 换更粗粒度 (日→周) / 分层评估 | `y_test.std() / y_test.mean()`           |
 | 特征 importance 分布**极度不均**       | 关键特征信息量太大，其他特征被遮蔽 | 正常现象，但可尝试删掉 top1 看变化       | —                                        |
 
 !!! warning "调参的正确顺序"
@@ -292,7 +292,7 @@ graph TD
 
 ??? question "Q2: 模型过拟合了怎么办？"
 
-    **诊断**: 训练集 MAE 很低，测试集 MAE 很高 → 过拟合。
+    **诊断**: 训练集 M[目标业务] 很低，测试集 M[目标业务] 很高 → 过拟合。
 
     **四板斧** (按优先级排序)：
 
