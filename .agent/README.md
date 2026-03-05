@@ -18,17 +18,21 @@
 
 ### `workflows/` — 标准化工作流
 
-| Workflow                 | 触发命令               | 功能                  |
-| :----------------------- | :--------------------- | :-------------------- |
-| `generate_notebook.md`   | `/generate_notebook`   | 生成分级练习 Notebook |
-| `update_cheatsheet.md`   | `/update_cheatsheet`   | 更新 MkDocs 知识库    |
-| `review_cheatsheet.md`   | `/review_cheatsheet`   | 审查知识库质量        |
-| `daily_progress.md`      | `/daily_progress`      | 总结每日学习进度      |
-| `daily_review.md`        | `/daily_review`        | 每日双视角客观复盘    |
-| `generate_resume.md`     | `/generate_resume`     | 根据 JD 定制简历      |
-| `update_applications.md` | `/update_applications` | 更新投递进度          |
-| `update_senior_gap.md`   | `/update_gap`          | 更新 Gap Analysis     |
-| `create_doc.md`          | `/create_doc`          | 创建/更新文档         |
+| Workflow                   | 触发命令                 | 功能                  |
+| :------------------------- | :----------------------- | :-------------------- |
+| `generate_notebook.md`     | `/generate_notebook`     | 生成分级练习 Notebook |
+| `generate_gap_analysis.md` | `/generate_gap_analysis` | 根据 JD 生成差距分析  |
+| `recommend_resources.md`   | `/recommend_resources`   | 推荐视频教程与搜索词  |
+| `generate_exam.md`         | `/generate_exam`         | 生成企业定制化笔试题  |
+| `mock_interview.md`        | `/mock_interview`        | 生成外接语音面试模板  |
+| `update_cheatsheet.md`     | `/update_cheatsheet`     | 更新 MkDocs 知识库    |
+| `review_cheatsheet.md`     | `/review_cheatsheet`     | 审查知识库质量        |
+| `daily_progress.md`        | `/daily_progress`        | 总结每日学习进度      |
+| `daily_review.md`          | `/daily_review`          | 每日双视角客观复盘    |
+| `generate_resume.md`       | `/generate_resume`       | 根据 JD 定制简历      |
+| `update_applications.md`   | `/update_applications`   | 更新投递进度          |
+| `update_senior_gap.md`     | `/update_gap`            | 更新 Gap Analysis     |
+| `create_doc.md`            | `/create_doc`            | 创建/更新文档         |
 
 ## 🚀 如何自定义？
 
