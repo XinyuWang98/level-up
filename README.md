@@ -5,8 +5,7 @@
 > 摒弃“一上来就死磕底层数学公式”的传统反人类路线。这是一套基于 **AI Agent + IDE** 的零成本学习与求职方法论框架。这个仓库不仅展示了作者硬核的真实历程，更是一套开箱即用的脚手架，帮助你建立 **评估 → 学习（先全栈跑通）→ 实操（深挖底层组件）→ 面试（输出顶级降维打击实战）** 全生命周期的专属 AI 导师闭环系统。
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x400/1e293b/ffffff?text=Replace+with+your+Knowledge+Base+Screenshot" width="100%" alt="知识库首页预览" />
-  <p><em>(👉 建议将上方替换为 MkDocs 知识库首页的精美截图，展示你的学习成果)</em></p>
+  <img src="assets/hero_workspace.png" width="100%" alt="IDE 内 Agent 工作流与知识库联动预览" />
 </div>
 
 ---
@@ -41,9 +40,8 @@
 ## 📸 核心模块一览
 
 <div align="center">
-  <img src="https://via.placeholder.com/400x250/0f172a/38bdf8?text=Interview+Deep+Dive" width="48%" alt="硬核面试题库预览" />
-  <img src="https://via.placeholder.com/400x250/0f172a/10b981?text=Agent+Workspace" width="48%" alt="IDE 内 Agent 工作流交互" />
-  <p><em>(👉 建议上传两张截图：左侧展示知识库内高难度的面试折叠问答；右侧展示你在 IDE 中与 Agent 使用 Workflow 的交互画面)</em></p>
+  <img src="assets/interview_deep_dive.png" width="80%" alt="硬核面试题库预览" />
+  <p><em>(高度脱敏且经过排版优化的实战面经与连招库)</em></p>
 </div>
 
 ---
@@ -140,6 +138,7 @@ A: 绝对有。这里的底层方法论是跨学科的：**Benchmark（定位盲
 
 ## 🙏 鸣谢 (Special Thanks)
 
-本项目 `02_速查手册` 的优雅呈现，离不开这群了不起的开源先驱：
-- 特别鸣谢 [MkDocs](https://www.mkdocs.org/) 提供了强大且极简的静态站点生成能力。
-- 特别鸣谢 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 带来了如此现代化、高颜值的文档主题交互体验。
+本项目 `02_速查手册` 的优雅呈现与交互，离不开这群了不起的开源先驱：
+- **静态生成平台**：感谢 [MkDocs](https://www.mkdocs.org/) 提供了强大且极简的静态站点生成能力。
+- **UI 主题系统**：感谢 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 带来了如此现代化、高颜值的文档主题交互体验。
+- **思维导图渲染**：感谢 [Markmap](https://markmap.js.org/) 以及 `mkdocs-markmap` 插件，让 Markdown 列表瞬间化为可交互的动态思维导图。
