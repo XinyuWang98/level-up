@@ -289,14 +289,14 @@ X_train, X_val, X_test = X[train_mask], X[val_mask], X[test_mask]
 
 ## 6. 进阶：如何应对"时代变了" (Concept Drift)？📉
 
-*你的直觉是对的！在 某跨境电商S公司/TikTok 这种快节奏业务中，2年前的数据确实可能"过时"了。*
+*你的直觉是对的！在 前司某电商平台/TikTok 这种快节奏业务中，2年前的数据确实可能"过时"了。*
 
 **如果只用 standard split，模型会被旧数据"拖后腿"。** 解决方案有两个层级：
 
 ### 1. 拆分层级：滑动窗口 (Sliding Window) 🪟
 
 不同于 Expanding Window (越学越多)，Sliding Window **只看最近 N 个月**。
-*   **适用**: 时尚电商 (某跨境电商S公司)、短视频推荐 (TikTok) — 潮流变化极快。
+*   **适用**: 时尚电商 (前司某电商平台)、短视频推荐 (TikTok) — 潮流变化极快。
 *   **做法**: 训练集长度固定，随时间向前滑动，丢弃太旧的数据。
 
 ```python
@@ -326,7 +326,7 @@ model.fit(X_train, y_train, sample_weight=weights)
 
 !!! tip "面试话术：Big Data Split"
 
-    "在 某跨境电商S公司 这种数据量级下，我们通常采用 **6:2:2** 的严格时序切分。同时为了应对 **Concept Drift**，我们会使用 **Sliding Window** 策略，或者在 Loss Function 中加入 **Time Decay**，确保模型对即时趋势保持敏感。"
+    "在 前司某电商平台 这种数据量级下，我们通常采用 **6:2:2** 的严格时序切分。同时为了应对 **Concept Drift**，我们会使用 **Sliding Window** 策略，或者在 Loss Function 中加入 **Time Decay**，确保模型对即时趋势保持敏感。"
 
 
 | 错误                           | 后果                           | 正确做法          |

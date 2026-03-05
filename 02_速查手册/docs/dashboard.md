@@ -11,7 +11,7 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'primaryColor': '#3b82f6', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2563eb', 'secondaryColor': '#f59e0b', 'secondaryTextColor': '#fff', 'secondaryBorderColor': '#d97706', 'tertiaryColor': '#10b981', 'lineColor': '#64748b', 'textColor': '#e2e8f0', 'titleColor': '#f1f5f9', 'sectionBkgColor': 'transparent', 'altSectionBkgColor': 'transparent', 'gridColor': '#475569', 'doneTaskBkgColor': '#10b981', 'doneTaskBorderColor': '#059669', 'activeTaskBkgColor': '#f59e0b', 'activeTaskBorderColor': '#d97706', 'taskBkgColor': '#3b82f6', 'taskBorderColor': '#2563eb', 'taskTextColor': '#ffffff', 'taskTextOutsideColor': '#e2e8f0', 'critBkgColor': '#ef4444', 'critBorderColor': '#dc2626', 'todayLineColor': '#f43f5e'}}}%%
 gantt
-    title P7冲刺路线图 (3/3 → 3/16)
+    title 高级专家冲刺路线图 (3/3 → 3/16)
     dateFormat YYYY-MM-DD
     axisFormat %m/%d
     todayMarker stroke-width:3px,stroke:#f43f5e
@@ -36,7 +36,7 @@ gantt
     终面反客为主准备    :m3c, 2026-03-15, 2d
 
     section 投递与面试
-    密集投递 (阿里+备选) :crit, d1, 2026-03-12, 3d
+    密集投递 (目标大厂+备选) :crit, d1, 2026-03-12, 3d
     收网 + Offer 谈判    :crit, d4, 2026-03-24, 7d
     🎯 Offer Deadline   :milestone, d5, 2026-03-31, 0d
 ```
@@ -83,7 +83,7 @@ flowchart LR
 
 ---
 
-## 🔄 P7 冲刺核心：护城河加固与“泥土感”重塑
+## 🔄 高级专家 冲刺核心：护城河加固与“泥土感”重塑
 
 ### Stage 1: 护城河加固 (3/3 - 3/5)
 

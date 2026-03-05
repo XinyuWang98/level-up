@@ -144,7 +144,7 @@ graph TD
 *   **换算关系**: 如果 `num_leaves > 2^max_depth`，模型会过拟合！
 
 ## SOTA 模型: CatBoost 🐱
-*处理类别特征的神器 (阿里/美团常用)。*
+*处理类别特征的神器 (目标大厂/美团常用)。*
 
 ??? example "CatBoost 代码模板"
 
