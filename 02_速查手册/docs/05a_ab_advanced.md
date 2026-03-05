@@ -303,14 +303,14 @@ n_max = calc_max_sample_size(BASE_RATE, MDE_REL)
 tau_squared = calc_msprt_tau_sq(MDE_REL, BASE_RATE, n_max)
 
 print(f"【阶段1】实验立项前计算：")
-print(f"为检测 5% 提升，传统需要总样本 {n_max:,.0f} 人作为兜底周期 (假定每天进线1万，兜底期为 {n_max/10000:.0f} 天)")
+print(f"为检测 5% 提升，传统需要总样本 {n_max:,.0f} 人作为兜底周期 (假定每天大盘流量1万，兜底期为 {n_max/10000:.0f} 天)")
 print(f"根据此 MDE 预设锁定系统级别的 tau_sq = {tau_squared:.6f}\n")
 
 print(f"【阶段2】看板动态每天监控门槛 (Open-ended)：")
 # 业务说：遇到周末流量低迷，我跑到第 8 天行不行？
 # 行！只要输入当时的累积样本，随时吐出门槛
 for day in range(1, 9): 
-    accumulated_n = day * 10000 # 假设日均1w进线
+    accumulated_n = day * 10000 # 假设日均1w曝光
     z_th, p_th = msprt_open_ended_threshold(accumulated_n, tau_squared)
     print(f"Day {day} (累积 {accumulated_n} 人) | 要求 Z > {z_th:.3f} | 或等效 P值 < {p_th:.6f}")
 ```
@@ -420,7 +420,7 @@ for day in range(1, 9):
     is_tipped_exp = (tip_exp > 0).astype(int)
     is_tipped_ctrl = (tip_ctrl > 0).astype(int)
 
-    # 统计转化人数和总进线人数
+    # 统计转化人数和总曝光人数
     count_tipped = [is_tipped_exp.sum(), is_tipped_ctrl.sum()]
     nobs = [len(is_tipped_exp), len(is_tipped_ctrl)]
 
@@ -500,11 +500,11 @@ Day 6-7:  ██████        +4%   ← 稳定 → ✅ 真实效果！
 
 即使护栏指标在实验期间表现正常，某些**滞后影响**可能要数周甚至数月后才会显现。
 
-| 场景               | 短期表现        | 长期隐患                              |
-| :----------------- | :-------------- | :------------------------------------ |
+| 场景             | 短期表现          | 长期隐患                              |
+| :--------------- | :---------------- | :------------------------------------ |
 | FAQ 改版减少流失 | ✅ 核心流失率 -9pp | ⚠️ 用户问题未真正解决 → 复购率可能下降 |
-| 推荐算法优化 CTR   | ✅ CTR +3%       | ⚠️ 同质化推荐 → 用户长期兴趣衰减       |
-| 激进弹窗提升注册   | ✅ 注册率 +15%   | ⚠️ 用户体验恶化 → 7 日留存下降         |
+| 推荐算法优化 CTR | ✅ CTR +3%         | ⚠️ 同质化推荐 → 用户长期兴趣衰减       |
+| 激进弹窗提升注册 | ✅ 注册率 +15%     | ⚠️ 用户体验恶化 → 7 日留存下降         |
 
 **应对策略**：全量上线后设置 **Post-launch 监控窗口**（通常 2-4 周），持续跟踪滞后指标（留存率、复购率、NPS 等）。如果出现负向趋势，立即回滚。
 
@@ -528,10 +528,10 @@ Day 6-7:  ██████        +4%   ← 稳定 → ✅ 真实效果！
 
 ### Sequential Testing / Alpha Spending
 
-| 视频                                                                                                    | 说明                                                                        |
-| :------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------- |
+| 视频                                                                                                            | 说明                                                                        |
+| :-------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
 | [Sequential Testing in A/B Experiments (Uber Engineering)](https://www.youtube.com/watch?v=nMCnmr0[目标业务]rg) | Uber 工程团队讲解 mSPRT 贯序检验在其实验平台中的实战应用                    |
-| [Group Sequential Tests: Alpha Spending (PASS Software)](https://www.youtube.com/watch?v=s6gMW8VEy5I)   | 详细讲解 O'Brien-Fleming 和 Pocock Alpha Spending Function 的数学推导与用法 |
+| [Group Sequential Tests: Alpha Spending (PASS Software)](https://www.youtube.com/watch?v=s6gMW8VEy5I)           | 详细讲解 O'Brien-Fleming 和 Pocock Alpha Spending Function 的数学推导与用法 |
 
 !!! tip "学习顺序建议"
     1. 先看 CUPED 视频理解"方差缩减"的直觉
