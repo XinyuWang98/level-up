@@ -89,11 +89,11 @@
     **答法**：SRM 意味着随机分流遭到破坏 → P-value 无意义 → 必须先排查 SRM 原因 → 修复后重跑
 
 ??? warning "Q7: P=0.08 未显著，业务急着上线怎么办？ ⭐必练"
-    → [查看降维打击回答：难题 5](17_interview_prep.md#p7-flashcards)
+    → [查看降维打击回答：难题 5](17_interview_prep.md#hard-flashcards)
     **骨架记忆**：排查 SRM/MDE → PSM/IPW 修复偏差 → CUPED 降噪
 
 ??? warning "Q8: 实验组比对照组少/多 5%，怎么挽救？ 😈硬核"
-    → [查看降维打击回答：难题 6](17_interview_prep.md#p7-flashcards)
+    → [查看降维打击回答：难题 6](17_interview_prep.md#hard-flashcards)
     **骨架记忆**：少→PSM（丰水池找替身）| 多→IPW（枯水池加权拉扯）→ SMD + Placebo 验证
 
 ??? warning "Q9: CUPED 在大促期间还适用吗？（协变量分布变了）"
