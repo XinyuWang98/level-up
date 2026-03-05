@@ -53,23 +53,26 @@ level-up/
 
 本系统适用于任何支持 Agent 功能的 IDE（如 Cursor、Windsurf、VS Code + Copilot 等）。请在克隆项目后，**按以下顺序使用系统内设的 Workflow 与你的 AI 导师互动**：
 
-### 阶段 1: Benchmark 能力体检
+### 阶段 1: 能力体检 (Benchmark)
 - **寻找目标**: 找到你心仪公司的岗位 JD (Job Description)。
 - **触发指令**: 输入 `/generate_gap_analysis` 并提供 JD。Agent 将生成客观的技能差距矩阵，保存在 `03_职业规划` 目录。
 
-### 阶段 2 & 3: 实战进阶与知识沉淀 (Hands-on Labs & Knowledge Base)
+### 阶段 2, 3, 4: 实战进阶与知识沉淀 (Hands-on Labs, Video Bridge & Knowledge Base)
 - **获取练习题**: 输入 `/generate_notebook`，Agent 会主动向你要 Kaggle API，并根据你的目标岗位检索真实的商业数据集出题（存放于 `00_教学课件` 或 `01_专项专栏`）。
 - **突破认知盲区**: 遇到不懂得知识点触发 `/recommend_resources`，让 Agent 联网搜索真实的 B 站/YouTube 高质量解说视频（拒绝伪造幻觉链接）。
 - **沉淀知识**: 练习完成后，输入 `/update_cheatsheet` 将今日所学归档到 `02_速查手册` 中。
 - **每日双重复盘**: 临睡前输入 `/daily_progress` 和 `/daily_review`，生成你在该项目中的专属学习日志（存放于 `06_复盘与日志示例`）。
 
-### 阶段 4 & 5: 求职冲刺与面试模拟 (Interview Prep & Resume Builder)
+### 阶段 5 & 6: 求职冲刺与面试模拟 (Interview Prep & Resume Builder)
 - **定制笔试卷**: 输入 `/generate_exam`，Agent 会先通过 Web Search 检索目标公司历年真实考点，再为你生成符合业务场景的复杂实战套题（存放于 `05_笔试模拟`）。
 - **极限抗压面试**: 输入 `/mock_interview` 给出你的目标公司和简历。Agent 会输出一套专为**具有语音交互能力的第三方大模型 (如豆包专家模式、ChatGPT Voice 等)** 准备的严苛考官 Prompt。拿着它去和语音模型真刀真枪地对练，完事后再把薄弱环节反馈发回给这里的 Agent 帮你制定复习计划（复盘报告存放在 `04_面试练习`）。
 - **定制简历**: 确认技能达标后，通过 `/generate_resume` 基于不同岗位的 JD 快速优化出你的专属版本。
 
-### 阶段 6: 投递追踪 (App Tracker)
+### 阶段 7: 投递追踪 (App Tracker)
 - **管理面试漏斗**: 使用 `/update_applications` 更新和记录面试轮次、考察点与反馈，系统化追踪求职状态。
+
+### 阶段 8: 知识库持续复用 (Knowledge Reuse)
+- **职场军火库**: 面试成功后，这套系统不会像普通网课一样被废弃。你前期积累的 `02_速查手册` 将成为你入职新公司后最顺手的私有知识库，你可以继续用 AI 帮你探索新业务栈并沉淀文档。
 
 ---
 
