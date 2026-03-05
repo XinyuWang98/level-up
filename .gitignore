@@ -29,3 +29,4 @@ site/
 # 环境
 .env
 .venv/
+catboost_info/
