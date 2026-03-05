@@ -1,4 +1,4 @@
-# XinyuWang — Senior Data Analyst
+# [你的姓名] — Senior Data Analyst
 
 > 5 年经验 | 数据分析 & 数据科学 | Python / SQL / 因果推断
 
@@ -6,8 +6,8 @@
 
 ## 联系方式
 
-- 📧 Email: xinyuwang@example.com
-- 🔗 GitHub: github.com/XinyuWang98
+- 📧 Email: [你的姓名拼音]@example.com
+- 🔗 GitHub: github.com/[你的姓名]98
 - 📍 Location: 上海
 
 ---

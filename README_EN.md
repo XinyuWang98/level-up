@@ -2,7 +2,7 @@
 
 > **[中文](README.md) | [English](README_EN.md)**
 
-A zero-cost learning methodology framework powered by **AI Agent + IDE**. This repository documents XinyuWang's real learning journey, demonstrating how to build an AI-assisted learning system covering the entire lifecycle: **Learn → Practice → Job Hunt**.
+A zero-cost learning methodology framework powered by **AI Agent + IDE**. This repository documents [你的姓名]'s real learning journey, demonstrating how to build an AI-assisted learning system covering the entire lifecycle: **Learn → Practice → Job Hunt**.
 
 ---
 
@@ -89,4 +89,4 @@ MIT License
 
 ---
 
-*Built with ❤️ and AI by XinyuWang*
+*Built with ❤️ and AI by [你的姓名]*

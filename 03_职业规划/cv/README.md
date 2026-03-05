@@ -13,13 +13,13 @@
 
 | 文件                           | 说明                          |
 | :----------------------------- | :---------------------------- |
-| `XinyuWang_DA_5YOE_Example.md` | Mock 简历示例（展示推荐格式） |
+| `DA_5YOE_Example.md` | Mock 简历示例（展示推荐格式） |
 
 ## 🚀 如何使用？
 
 ### Step 1: 创建你的通用版简历
 
-参考 `XinyuWang_DA_5YOE_Example.md` 的格式，创建你自己的简历：
+参考 `DA_5YOE_Example.md` 的格式，创建你自己的简历：
 
 ```markdown
 # 你的名字
