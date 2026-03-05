@@ -41,7 +41,7 @@
 
 <div align="center">
   <img src="assets/interview_deep_dive.png" width="80%" alt="硬核面试题库预览" />
-  <p><em>(高度脱敏且经过排版优化的实战面经与连招库)</em></p>
+  <p><em>(知识库概览)</em></p>
 </div>
 
 ---
