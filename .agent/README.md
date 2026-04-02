@@ -1,4 +1,4 @@
-# 🧠 Agent 配置
+# 🧠 Agent 配置 (Job Search Operating System)
 
 > Agent 的"大脑"——定义 Mentor 角色设定和标准化工作流
 
@@ -8,31 +8,33 @@
 
 ## 📂 文件说明
 
-### `rules/learning.md` — Mentor 角色设定
+### `rules/learning.md` — 导师设定 (Mentor Persona)
 
-定义了 Agent 的角色和行为准则：
-- **角色**: 资深数据科学家 Mentor
-- **交互模式**: Gap Driven（所有学习关联差距分析）+ Challenge Mode（主动挑战低级方案）
-- **代码规范**: PEP 8、Type Hints、向量化思维
-- **反馈纪律**: 客观诚恳，禁止安慰式反馈
+定义了 Agent 的角色和核心行为准则：
+- **角色定位**: 资深数据分析专家 + AI 开发者 Mentor
+- **核心叙事**: 强调方法论迁移、因果推断深度及 AI 提效工具开发。
+- **反馈纪律**: 严格执行 **Rule 0 (中文优先)**，拒绝过度夸大的 AI 虚词，保持专业且平等的对话口吻。
+- **单一事实来源 (SSOT)**：所有求职状态追踪统一归口至 `02_速查手册/docs/Resume_Tracker.md`。
 
-### `workflows/` — 标准化工作流
+### `workflows/` — 标准化操作流 (Operating SOPs)
 
-| Workflow                   | 触发命令                 | 功能                  |
-| :------------------------- | :----------------------- | :-------------------- |
-| `generate_notebook.md`     | `/generate_notebook`     | 生成分级练习 Notebook |
-| `generate_gap_analysis.md` | `/generate_gap_analysis` | 根据 JD 生成差距分析  |
-| `recommend_resources.md`   | `/recommend_resources`   | 推荐视频教程与搜索词  |
-| `generate_exam.md`         | `/generate_exam`         | 生成企业定制化笔试题  |
-| `mock_interview.md`        | `/mock_interview`        | 生成外接语音面试模板  |
-| `update_cheatsheet.md`     | `/update_cheatsheet`     | 更新 MkDocs 知识库    |
-| `review_cheatsheet.md`     | `/review_cheatsheet`     | 审查知识库质量        |
-| `daily_progress.md`        | `/daily_progress`        | 总结每日学习进度      |
-| `daily_review.md`          | `/daily_review`          | 每日双视角客观复盘    |
-| `generate_resume.md`       | `/generate_resume`       | 根据 JD 定制简历      |
-| `update_applications.md`   | `/update_applications`   | 更新投递进度          |
-| `update_senior_gap.md`     | `/update_gap`            | 更新 Gap Analysis     |
-| `create_doc.md`            | `/create_doc`            | 创建/更新文档         |
+| Workflow                   | 触发命令                 | 功能                                      |
+| :------------------------- | :----------------------- | :---------------------------------------- |
+| `cold_start.md`            | `/cold_start`            | **[NEW]** 初始化用户背景、叙事映射与导师设定 |
+| `create_doc.md`            | `/create_doc`            | 创建或更新文档，遵循 Rule 0 中文优先规则    |
+| `daily_progress.md`        | `/daily_progress`        | 总结今日学习进度，整合搜索分析与 Gap 报告   |
+| `daily_review.md`          | `/daily_review`          | 每日复盘工作流，从导师与学员两个维度对谈   |
+| `generate_boss_greeting.md`| `/generate_boss_greeting`| 生成高转化率的 BOSS 直聘打招呼话术          |
+| `generate_exam.md`         | `/generate_exam`         | 结合岗位 JD 个性化生成高频考点笔试题        |
+| `generate_gap_analysis.md` | `/generate_gap_analysis` | 评估技能差距，生成标准化的分析矩阵          |
+| `generate_notebook.md`     | `/generate_notebook`     | 生成特定学习模块的标准化 Jupyter Notebook    |
+| `generate_resume.md`       | `/generate_resume`       | 根据岗位 JD 生成定制化简历 (含去客服化逻辑)   |
+| `mock_interview.md`        | `/mock_interview`        | 输出结构化面试模拟框架和提示词              |
+| `recommend_resources.md`   | `/recommend_resources`   | 推荐真实核验的学习视频或资源                |
+| `review_cheatsheet.md`     | `/review_cheatsheet`     | 审查速查手册内容、Mermaid 及样式规范        |
+| `update_applications.md`   | `/update_applications`   | 更新投递进度及其关联的所有列表与 Tracker    |
+| `update_cheatsheet.md`     | `/update_cheatsheet`     | 使用新知识点或案例更新 MkDocs 知识库        |
+| `update_senior_gap.md`     | `/update_gap`            | 动态更新资深数分能力 Gap 分析进度           |
 
 ## 🚀 如何自定义？
 

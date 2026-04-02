@@ -2188,5 +2188,107 @@
     "timestamp": "2026-03-04T05:33:22.786Z",
     "page": "15a_did",
     "title": "📊 DID (双重差分) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:25:28.659Z",
+    "page": "index",
+    "title": "🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:25:37.222Z",
+    "page": "01_python_basics",
+    "title": "🐍 Python 基础 & 心法 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:25:43.472Z",
+    "page": "04_inference_framework",
+    "title": "🗺️ 分析总纲 (Framework) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:26:00.113Z",
+    "page": "05_statistics",
+    "title": "📐 统计学基础 (假设检验) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:26:11.717Z",
+    "page": "18_attribution_analysis",
+    "title": "🕵️ 归因分析 (MTA) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:26:39.898Z",
+    "page": "00_ml_sop",
+    "title": "🧭 机器学习标准流程 (ML SOP) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:26:51.940Z",
+    "page": "10a_ml_system_design",
+    "title": "⚙️ 机器学习系统架构 (Drift/Active) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:27:13.840Z",
+    "page": "13_business_analysis",
+    "title": "💰 业务分析 (留存/漏斗/RFM) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:27:19.151Z",
+    "page": "16_data_engineering",
+    "title": "🏗️ 数据工程 (SQL/Pipeline) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:27:24.326Z",
+    "page": "17_interview_prep",
+    "title": "📋 总览 (STAR/深挖/投递) - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:28:28.979Z",
+    "page": "17_interview_mistakes",
+    "title": "⚠️ 高频翻车错题本 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:28:43.651Z",
+    "page": "17_ml_interview_cheat_sheet",
+    "title": "🤖 核心机器学面经速查 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:28:48.748Z",
+    "page": "17a_interview_ab",
+    "title": "🧪 A/B 实验与假设检验 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:28:52.766Z",
+    "page": "17f_interview_deep_dive",
+    "title": "🔥 P7 深度拷问 Q&A - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:29:01.976Z",
+    "page": "17e_interview_classify",
+    "title": "🎯 分类与模型评估 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:29:08.328Z",
+    "page": "Resume_Tracker",
+    "title": "📊 投递全链路追踪 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
+  },
+  {
+    "type": "visit",
+    "timestamp": "2026-04-02T13:29:18.466Z",
+    "page": "mindmap",
+    "title": "🧠 思维导图 - 🧙‍♂️ 数据分析师 · Python 终极知识库"
   }
 ]

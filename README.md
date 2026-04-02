@@ -61,6 +61,30 @@
 
 ---
 
+## 🛠️ 环境准备与依赖安装 (Getting Started)
+
+在启动项目前，请确保您的本地环境已安装以下开源组件：
+
+### 1. 基础环境
+- **Python 3.8+**: 核心脚本与分析服务运行环境。
+- **Git**: 用于克隆与同步仓库。
+
+### 2. 知识库相关 (MkDocs)
+本项目使用 MkDocs + Material 主题构建交互式知识库。
+```bash
+# 安装 MkDocs 核心及 Material 主题
+pip install mkdocs-material
+
+# 安装常用插件 (数学公式、思维导图、提示框)
+pip install pymdown-extensions mkdocs-markmap
+```
+
+### 3. 编辑器/IDE 与 Agent
+- **推荐 IDE**: Cursor, Windsurf 或 VS Code (+ Copilot/Continue)。
+- **配置**: 确保 IDE 已识别根目录下的 `.agent` 文件夹，这将激活内置的 AI 导师规则。
+
+---
+
 ## 🚀 核心工作流：八大阶段快速上手 (Quick Start)
 
 本系统适用于任何支持 Agent 功能的现代 IDE（如 Cursor、Windsurf、VS Code + Copilot 等）。克隆项目后，**请按以下顺序唤醒你的 AI 导师并使用内置 Workflow**：
